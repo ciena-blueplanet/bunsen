@@ -1,0 +1,75 @@
+//
+// Styles for cy-bunsen
+// Copyright(c) 2015 Ciena Corporation. All rights reserved.
+//
+
+@import '~cy-bootstrap/src/style/variables.less';
+
+.icon-button() {
+    background: none;
+    border: none;
+    color: @cy-color-icon-normal;
+    &:hover {
+        color: @cy-color-icon-selected;
+    }
+}
+
+.cy-bunsen {
+    .image-wrapper {
+        padding: 15px;
+    }
+
+    // Add some spacing to visualize object nesting
+    .model-container,
+    .array-container {
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .array-container {
+        legend, .nav-tabs {
+            button.add-item {
+                .icon-button();
+            }
+        }
+
+        legend {
+            button.add-item {
+                font-size: 0.65em;
+            }
+        }
+
+        .item-wrapper, .nav-tabs {
+            button.remove-item {
+                .icon-button();
+            }
+        }
+    }
+
+    .has-error {
+        .required {
+            border-color: @brand-danger;
+        }
+    }
+
+    .required {
+        border: 1px solid @brand-primary;
+        border-radius: 4px;
+    }
+
+    .button-bar {
+        button {
+            margin-left: 5px;
+        }
+    }
+}
+
+// Remove the add/remove buttons when in read-only (Detail) components
+.cy-bunsen-detail {
+    .array-container {
+        button.add-item,
+        button.remove-item {
+            display: none;
+        }
+    }
+}

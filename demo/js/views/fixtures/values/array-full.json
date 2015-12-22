@@ -1,0 +1,20 @@
+{
+    "name": {
+        "first": "Steve",
+        "last": "Rogers"
+    },
+    "addresses": [
+        {
+            "street": "569 Leaman Place",
+            "city": "Brooklyn Heights",
+            "state": "New York",
+            "zip": "11201"
+        },
+        {
+            "street": "200 Park Avenue",
+            "city": "Manhattan",
+            "state": "New York",
+            "zip": "10166"
+        }
+    ]
+}

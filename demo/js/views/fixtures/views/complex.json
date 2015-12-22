@@ -1,0 +1,41 @@
+{
+    "version": "1.0",
+    "type": "form",
+    "rootContainers": [{"label": "Flat", "container": "flat"}],
+    "containers": [
+        {
+            "id": "networkElement",
+            "defaultClassName": "col-md-12",
+            "rows": [
+                [{"model": "name"}],
+                [{"model": "interfaces", "itemContainer": "interface"}]
+            ]
+        },
+
+        {
+            "id": "interface",
+            "rows": [
+                [
+                    {"model": "name", "className": "col-md-8"},
+                    {"model": "adminState", "className": "col-md-4"}
+                ]
+            ]
+        },
+
+        {
+            "id": "flat",
+            "rows": [
+                [{"model": "network.host.name", "label": "Host Name"}],
+                [{"model": "network.host.interfaces", "label": "Host Interfaces", "item": {"container": "interface"}}],
+                [{"model": "network.firewall.name", "label": "Firewall Name"}],
+                [{
+                    "model": "network.firewall.interfaces",
+                    "label": "Firewall Interfaces",
+                    "item": {
+                        "container": "interface"
+                    }
+                }]
+            ]
+        }
+    ]
+}

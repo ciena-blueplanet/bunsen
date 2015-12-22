@@ -1,0 +1,32 @@
+{
+    "version": "1.0",
+    "type": "form",
+    "rootContainers": [
+        {
+            "label": "Main",
+            "container": "main"
+        }
+    ],
+    "containers": [
+        {
+            "id": "main",
+            "rows": [
+                [
+                    {
+                        "model": "name",
+                        "renderer": "NameRenderer"
+                    }
+                ],
+                [
+                    {
+                        "model": "addresses",
+                        "item": {
+                            "label": "Address",
+                            "renderer": "AddressRenderer"
+                        }
+                    }
+                ]
+            ]
+        }
+    ]
+}
