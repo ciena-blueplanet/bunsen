@@ -3,10 +3,10 @@
 # Copyright (c) 2015 Ciena Corporation. All rights reserved.
 #
 
-GITHUB_HOST := github.cyanoptics.com
-REPO := UI/cy-bunsen
-WEBDRIVERIO_SERVER := http://donatello.cyanoptics.com:3000
-COVERALLS_ENDPOINT := http://coveralls-ubuntu.cyanoptics.com
+GITHUB_HOST := github.com
+REPO := cyaninc/bunsen
+WEBDRIVERIO_SERVER :=
+COVERALLS_ENDPOINT :=
 TESTING_FRAMEWORK := mocha
 
 -include node_modules/beaker/make/common.mk
