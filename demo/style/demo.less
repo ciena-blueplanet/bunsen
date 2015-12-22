@@ -1,0 +1,37 @@
+//
+// Demo styles
+//
+
+@import "~cy-bootstrap/src/style/variables.less";
+
+.page-header {
+    .cy-checkbox {
+        font-size: @font-size-base;
+        margin-top: 25px;
+    }
+}
+
+.editor-wrapper {
+    .CodeMirror {
+        background: transparent;
+        height: 50%;
+    }
+}
+
+.alert {
+    > div {
+        padding-bottom: @table-cell-padding;
+    }
+}
+
+pre {
+    &.valid {
+        background-color: @brand-success;
+        color: white;
+    }
+
+    &.invalid {
+        background-color: @brand-danger;
+        color: white;
+    }
+}

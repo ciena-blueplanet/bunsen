@@ -1,0 +1,47 @@
+{
+    "version": "1.0",
+    "type": "form",
+    "rootContainers": [{"label": "Main", "container": "main"}],
+    "containers": [
+        {
+            "id": "main",
+            "rows": [
+                [
+                    {
+                        "model": "alias",
+                        "className": "col-md-12",
+                        "labelClassName": "col-md-3",
+                        "inputClassName": "col-md-9"
+                    }
+                ],
+                [
+                    {
+                        "model": "firstName",
+                        "className": "col-md-6",
+                        "label": "First",
+                        "labelClassName": "col-md-6",
+                        "inputClassName": "col-md-6"
+                    },
+                    {
+                        "model": "lastName",
+                        "className": "col-md-6",
+                        "labelClassName": "col-md-6",
+                        "inputClassName": "col-md-6"
+                    }
+                ],
+                [
+                    {
+                        "model": "onlyChild",
+                        "className": "col-md-12",
+                        "labelClassName": "col-md-3",
+                        "inputClassName": "col-md-9"
+                    }
+                ]
+            ]
+        }
+    ],
+    "buttonLabels": {
+        "cancel": "Cancel",
+        "submit": "Create"
+    }
+}

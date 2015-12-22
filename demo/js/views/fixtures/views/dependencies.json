@@ -1,0 +1,86 @@
+{
+    "version": "1.0",
+    "type": "form",
+    "rootContainers": [
+        {
+            "label": "Main",
+            "container": "main"
+        }
+    ],
+    "containers": [
+        {
+            "id": "main",
+            "rows": [
+                [
+                    {
+                        "model": "name"
+                    }
+                ],
+                [
+                    {
+                        "model": "email"
+                    }
+                ],
+                [
+                    {
+                        "model": "paymentInfo",
+                        "renderer": "PropertyChooser",
+                        "label": "Payment Type",
+                        "properties": {
+                            "choices": [
+                                {
+                                    "label": "Electronic Funds Transfer",
+                                    "value": "useEft"
+                                },
+                                {
+                                    "label": "Credit Card",
+                                    "value": "useCreditCard"
+                                },
+                                {
+                                    "label": "PayPal",
+                                    "value": "usePayPal"
+                                }
+                            ]
+                        }
+                    }
+                ],
+                [
+                    {
+                        "model": "paymentInfo.routingNumber",
+                        "dependsOn": "paymentInfo.useEft"
+                    }
+                ],
+                [
+                    {
+                        "model": "paymentInfo.accountNumber",
+                        "dependsOn": "paymentInfo.useEft"
+                    }
+                ],
+                [
+                    {
+                        "model": "paymentInfo.creditCardNumber",
+                        "dependsOn": "paymentInfo.useCreditCard"
+                    }
+                ],
+                [
+                    {
+                        "model": "paymentInfo.ccv",
+                        "dependsOn": "paymentInfo.useCreditCard"
+                    }
+                ],
+                [
+                    {
+                        "model": "paymentInfo.payPalUsername",
+                        "dependsOn": "paymentInfo.usePayPal"
+                    }
+                ],
+                [
+                    {
+                        "model": "paymentInfo.payPalPassword",
+                        "dependsOn": "paymentInfo.usePayPal"
+                    }
+                ]
+            ]
+        }
+    ]
+}

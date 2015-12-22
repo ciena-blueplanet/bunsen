@@ -1,0 +1,286 @@
+{
+    "version": "1.0",
+    "type": "form",
+    "rootContainers": [
+        {
+            "label": "Main",
+            "container": "main"
+        }
+    ],
+    "containers": [
+        {
+            "id": "main",
+            "rows": [
+                [
+                    {
+                        "model": "productId",
+                        "labelClassName": "col-md-4",
+                        "inputClassName": "col-md-8"
+
+                    }
+                ],
+                [
+                    {
+                        "model": "desiredOrchState",
+                        "labelClassName": "col-md-4",
+                        "inputClassName": "col-md-8"
+                    }
+                ],
+                [
+                    {
+                        "model": "label",
+                        "labelClassName": "col-md-4",
+                        "inputClassName": "col-md-8"
+                    }
+                ],
+                [
+                    {
+                        "model": "discovered",
+                        "labelClassName": "col-md-4",
+                        "inputClassName": "col-md-8"
+                    }
+                ],
+                [
+                    {
+                        "model": "properties.name",
+                        "labelClassName": "col-md-4",
+                        "inputClassName": "col-md-8"
+                    }
+                ],
+                [
+                    {
+                        "model": "properties.description",
+                        "labelClassName": "col-md-4",
+                        "inputClassName": "col-md-8"
+                    }
+                ],
+                [
+                    {
+                        "model": "properties.customer-name",
+                        "labelClassName": "col-md-4",
+                        "inputClassName": "col-md-8"
+                    }
+                ],
+                [
+                    {
+                        "model": "properties.service.svc-bandwidth",
+                        "label": "Service Bandwidth",
+                        "labelClassName": "col-md-4",
+                        "inputClassName": "col-md-8"
+                    }
+                ],
+                [
+                    {
+                        "model": "properties.endpoints",
+                        "labelClassName": "col-md-4",
+                        "inputClassName": "col-md-8",
+                        "item": {
+                            "container": "endpoints"
+                        }
+                    }
+                ]
+            ]
+        },
+        {
+            "id": "endpoints",
+            "rows": [
+                [
+                    {
+                        "model": "nodeId",
+                        "labelClassName": "col-md-4",
+                        "inputClassName": "col-md-8"
+                    }
+                ],
+                [
+                    {
+                        "model": "nodeTypeGroup",
+                        "labelClassName": "col-md-4",
+                        "inputClassName": "col-md-8"
+                    }
+                ],
+                [
+                    {
+                        "model": "extension.interface",
+                        "container": "interface"
+                    }
+                ],
+                [
+                    {
+                        "model": "extension.vrf",
+                        "container": "vrf"
+                    }
+                ],
+                [
+                    {
+                        "model": "attachment",
+                        "container": "attachment"
+                    }
+                ]
+            ]
+        },
+        {
+            "id": "interface",
+            "rows": [
+                [
+                    {
+                        "model": "name"
+                    }
+                ],
+                [
+                    {
+                        "model": "dot1q"
+                    }
+                ],
+                [
+                    {
+                        "model": "second-dot1q"
+                    }
+                ],
+                [
+                    {
+                        "model": "address"
+                    }
+                ]
+            ]
+        },
+        {
+            "id": "vrf",
+            "rows": [
+                [
+                    {
+                        "model": "name"
+                    }
+                ],
+                [
+                    {
+                        "model": "address-family",
+                        "item": {
+                            "container": "address-family"
+                        }
+                    }
+                ]
+            ]
+        },
+        {
+            "id": "address-family",
+            "rows": [
+                [
+                    {
+                        "model": "type",
+                        "labelClassName": "col-md-4",
+                        "inputClassName": "col-md-8"
+                    }
+                ],
+                [
+                    {
+                        "model": "af.import.route-target",
+                        "label": "Import Route Target",
+                        "labelClassName": "col-md-4",
+                        "inputClassName": "col-md-8"
+                    }
+                ],
+                [
+                    {
+                        "model": "af.export.route-target",
+                        "label": "Export Route Target",
+                        "labelClassName": "col-md-4",
+                        "inputClassName": "col-md-8"
+                    }
+                ]
+            ]
+        },
+        {
+            "id": "export",
+            "rows": [
+                [
+                    {
+                        "model": "route-target",
+                        "labelClassName": "col-md-4",
+                        "inputClassName": "col-md-8"
+                    }
+                ]
+            ]
+        },
+        {
+            "id": "attachment",
+            "rows": [
+                [
+                    {
+                        "model": "connection",
+                        "container": "connection"
+                    }
+                ]
+            ]
+        },
+        {
+            "id": "connection",
+            "rows": [
+                [
+                    {
+                        "model": "ipv4.subnet-prefix",
+                        "label": "IPv4 Subnet Prefix",
+                        "labelClassName": "col-md-4",
+                        "inputClassName": "col-md-8"
+                    }
+                ],
+                [
+                    {
+                        "model": "routing-protocols",
+                        "item": {
+                            "container": "routing-protocols"
+                        }
+                    }
+                ]
+            ]
+        },
+        {
+            "id": "routing-protocols",
+            "rows": [
+                [
+                    {
+                        "model": "type"
+                    }
+                ],
+                [
+                    {
+                        "model": "bgp",
+                        "container": "bgp"
+                    }
+                ]
+            ]
+        },
+        {
+            "id": "bgp",
+            "rows": [
+                [
+                    {
+                        "model": "as-number",
+                        "labelClassName": "col-md-4",
+                        "inputClassName": "col-md-8"
+                    }
+                ],
+                [
+                    {
+                        "model": "address-family",
+                        "labelClassName": "col-md-4",
+                        "inputClassName": "col-md-8"
+                    }
+                ],
+                [
+                    {
+                        "model": "route-distinguisher",
+                        "labelClassName": "col-md-4",
+                        "inputClassName": "col-md-8"
+                    }
+                ],
+                [
+                    {
+                        "model": "vrf",
+                        "labelClassName": "col-md-4",
+                        "inputClassName": "col-md-8"
+                    }
+                ]
+            ]
+        }
+    ]
+}

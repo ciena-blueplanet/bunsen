@@ -1,0 +1,19 @@
+{
+    "type": "object",
+    "properties": {
+        "firstName": {
+            "type": "string"
+        },
+        "lastName": {
+            "type": "string"
+        },
+        "alias": {
+            "type": "string",
+            "title": "Nickname"
+        },
+        "onlyChild": {
+            "type": "boolean"
+        }
+    },
+    "required": ["lastName"]
+}
